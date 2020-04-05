@@ -1,0 +1,25 @@
+<h2> Follow Up Schedule index</h2>
+<table >
+  <thead >
+  <tr>
+    <th>day</th>
+    <th>cough</th>
+    <th>fever</th>
+    <th>breath</th>
+    <th>people</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+</thead>
+<tbody>
+<% @follow.each do |follow|%>
+<tr>
+<td><%= follow.id %></td>
+<td><%= follow.cough %></td>
+<td><%= follow.fever %></td>
+<td><%= follow.breath %></td>
+<td><%= follow.people %></td>
+</tr>
+<% end %>
+</tbody>
+</table>

@@ -1,0 +1,24 @@
+<h2>New Day </h2>
+
+<%= form_with model: @follow, local:true  do |form| %>
+
+<p>
+fever:
+<%= form.text_field :fever %>
+</p>
+<p>
+cough:
+<%= form.text_area :cough %>
+</p>
+<p>
+breath:
+<%= form.check_box :breath %>
+</p>
+<p>
+people:
+<%= form.text_area :people %>
+</p>
+<p>
+<%= form.submit %>
+</p>
+<% end %>
