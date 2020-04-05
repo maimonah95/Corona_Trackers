@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-   root 'follow_up_schedule#index'
-  resources :follow_up_schedule
+   root 'follows#index'
+  resources :follows
+  # get 'follow_up_schedule/new', to:'follow_up_schedule#new'
+  # post 'follow_up_schedule', to: 'follow_up_schedule#create'
 end
