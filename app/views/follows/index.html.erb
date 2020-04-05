@@ -1,4 +1,7 @@
 <h2> Follow Up Schedule index</h2>
+<div>
+<%= link_to "Add an Day", new_follow_path %>
+</div>
 <table >
   <thead >
   <tr>
@@ -19,6 +22,10 @@
 <td><%= follow.fever %></td>
 <td><%= follow.breath %></td>
 <td><%= follow.people %></td>
+<td><%= link_to 'Edit', edit_follow_path(follow) %></td>
+<td><%= link_to 'Destroy', follow,
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
 </tr>
 <% end %>
 </tbody>

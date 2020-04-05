@@ -1,19 +1,29 @@
-<h2>New Day </h2>
 
-<%= form_for  @follow do |form| %>
-
+<%= form_with model:@follow, local:true  do |form| %>
 <p>
 fever:
-<%= form.text_field :fever %>
-</p>
+<%= form.radio_button :fever, 'fever' %> 
+  <%= label :fever, 'yes' %>
+  <%= form.radio_button :fever, 'fever', :checked => true %>
+  <%= label :fever, 'No' %>
+  </p> 
+
 <p>
 cough:
-<%= form.text_area :cough %>
-</p>
+<%= form.radio_button :cough, 'cough' %> 
+  <%= label :fever, 'yes' %>
+  <%= form.radio_button :cough, 'cough', :checked => true %>
+  <%= label :fever, 'No' %>
+  </p> 
+
 <p>
 breath:
-<%= form.check_box :breath %>
-</p>
+<%= form.radio_button :breath, 'breath' %> 
+  <%= label :fever, 'yes' %>
+  <%= form.radio_button :breath, 'breath', :checked => true %>
+  <%= label :fever, 'No' %>
+  </p> 
+
 <p>
 people:
 <%= form.text_area :people %>
