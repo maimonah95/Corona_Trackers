@@ -1,11 +1,21 @@
 <h2>New Day </h2>
 
-<%= form_with model: @follow, local:true  do |form| %>
-
+<%= form_with model: @follow_up_schedule do |form| %>
 <p>
 fever:
+<%= form.radio_button :fever, 'fever' %> 
+  <%= label :fever, 'yes' %>
+  <%= form.radio_button :fever, 'fever', :checked => true %>
+  <%= label :fever, 'No' %>
+  </p>
+<p>
+<%
+=begin%>
+ fever:
 <%= form.text_field :fever %>
-</p>
+</p> 
+<%
+=end%>
 <p>
 cough:
 <%= form.text_area :cough %>
