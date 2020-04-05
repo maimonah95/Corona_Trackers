@@ -1,0 +1,2 @@
+module FollowUpScheduleHelper
+end

@@ -1,0 +1,3 @@
+class FollowUpScheduleController < ApplicationController
+    
+end
