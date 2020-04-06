@@ -1,21 +1,24 @@
-<h2> Follow Up Schedule Day <%= @follow.id %> </h2>
-<div class="container">
-<% @count = 0 %>
-<% if @follow.cough == true then @count = @count + 1 end%>
-<% if @follow.fever == true then @count = @count + 1 end%>
-<% if @follow.breath == true then @count = @count + 1 end%>
-<% if @count >= 3 then %>
-count is big: <%= @count %>
-<% end %>
-<br/>
-day: <%= @follow.id %>
-<br/>
-fever: <%= @follow.fever %>
-<br/>
-cough: <%= @follow.cough %>
-<br/>
-breath: <%= @follow.breath %>
-<br/>
-people: <%= @follow.people %>
+
+<div class="card" style="width: 80rem; margin: auto; text-align: center; ">
+<div class="card-header">
+<h2> Follow Up Day <%= @follow.updated_at %> </h2>
 </div>
+<ul class="list-group list-group-flush">
+
+<li class="list-group-item">day: <%= @follow.id %></li>
+
+<li class="list-group-item">fever: <%= @follow.fever %></li>
+
+<li class="list-group-item">cough: <%= @follow.cough %></li>
+
+<li class="list-group-item">breath: <%= @follow.breath %></li>
+
+<li class="list-group-item">people: <%= @follow.people %></li>
+<% if (@follow.cough == true) && (@follow.fever == true) && (@follow.breath == true) then%>
+<button type="button" class="btn btn-danger">You Need To seek care immediately</button>
+<% end %>
+</ul>
+<%= link_to 'Back', follows_path %> 
+</div>
+
 

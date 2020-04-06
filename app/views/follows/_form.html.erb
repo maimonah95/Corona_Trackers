@@ -1,8 +1,8 @@
-
+<div class="card" style="width: 80rem; margin: auto; text-align: center; ">
+<div class="card-header">
 <%= form_with model:@follow, local:true  do |form| %>
 <p>
-fever:
-
+Do you have fever ?
 <%= form.radio_button :fever, true %> 
   <%= form.label :fever, 'Yes' , :value => true %>
   <%= form.radio_button :fever, false ,:checked => true  %>
@@ -10,7 +10,7 @@ fever:
   </p> 
 
 <p>
-cough:
+Do you have cough ?
 <%= form.radio_button :cough, true %> 
   <%= label :fever, 'Yes' , :value => true %>
   <%= form.radio_button :cough, false, :checked => true %>
@@ -18,7 +18,7 @@ cough:
   </p> 
 
 <p>
-breath:
+Do you feel Shortness of breath or difficulty breathing ? 
 <%= form.radio_button :breath, true %> 
   <%= label :fever, 'Yes' , :value => true %>
   <%= form.radio_button :breath, false, :checked => true %>
@@ -26,10 +26,14 @@ breath:
   </p> 
 
 <p>
-people:
+if you meet someone today write his/her name:
+<br/>
 <%= form.text_area :people %>
 </p>
 <p>
-<%= form.submit 'create'%>
+<%= form.submit 'Submit' , class:"btn btn-info"%>
 </p>
 <% end %>
+
+</div>
+</div>

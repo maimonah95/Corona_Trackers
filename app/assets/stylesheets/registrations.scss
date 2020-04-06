@@ -1,3 +1,29 @@
 // Place all the styles related to the registrations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// html,
+// body {
+//     background: #7b7373;
+//      box-sizing: border-box;
+// }
+* {
+    box-sizing: border-box;
+}
+
+.field{
+    font-size: 36px; 
+    color: #b3b1b1;
+    font-family: "Times New Roman",
+    Times,
+    serif;
+}
+
+h1 {
+    color: white;
+}
+.container {
+// background: #b3b1b1;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}

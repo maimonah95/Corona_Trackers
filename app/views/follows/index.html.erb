@@ -1,34 +1,58 @@
-<h2> Follow Up Schedule index</h2>
+<h2 class="mt-4 mb-4 text-center"> Follow Up Schedule index</h2>
 <div>
-<%= link_to "Add an Day", new_follow_path %>
+<% if current_user.role == "R_user" then %>
+<%= link_to "Add an Day", new_follow_path,{ :class => "btn btn-info"} %>
+<% end %>
 </div>
-<table >
+<br/>
+<table class= "table table-hover" style="width: 150rem; margin: auto; text-align: center;">
   <thead >
-  <tr>
+  <tr >
     <th>day</th>
     <th>Name</th>
     <th>cough</th>
     <th>fever</th>
     <th>breath</th>
     <th>people</th>
+    <th>Show</th>
     <th>Edit</th>
     <th>Delete</th>
+    <th>Additional</th>
   </tr>
 </thead>
 <tbody>
 <% @follows.each do |follow|%>
-<tr>
-<td><%= follow.id %></td>
+<% if (follow.cough == true) && (follow.fever == true) && (follow.breath == true) then%>
+<tr class="table-danger">
+<td><%= follow.updated_at %></td>
 <td><%= follow.user.name %></td>
 <td><%= follow.cough %></td>
 <td><%= follow.fever %></td>
 <td><%= follow.breath %></td>
 <td><%= follow.people %></td>
+<td><%= link_to 'Show', follow_path(follow) %> </td>
 <td><%= link_to 'Edit', edit_follow_path(follow) %></td>
 <td><%= link_to 'Destroy', follow,
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
+              <td>You Need To seek care immediately</td>
 </tr>
+<% else %>
+<tr class="table-info">
+<td><%= follow.updated_at %></td>
+<td><%= follow.user.name %></td>
+<td><%= follow.cough %></td>
+<td><%= follow.fever %></td>
+<td><%= follow.breath %></td>
+<td><%= follow.people %></td>
+<td><%= link_to 'Show', follow_path(follow) %> </td>
+<td><%= link_to 'Edit', edit_follow_path(follow) %></td>
+<td><%= link_to 'Destroy', follow,
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+              <td></td>
+</tr>
+<% end %>
 <% end %>
 </tbody>
 </table>
