@@ -2,26 +2,27 @@
 <%= form_with model:@follow, local:true  do |form| %>
 <p>
 fever:
-<%= form.radio_button :fever, 'fever' %> 
-  <%= label :fever, 'yes' %>
-  <%= form.radio_button :fever, 'fever', :checked => true %>
-  <%= label :fever, 'No' %>
+
+<%= form.radio_button :fever, true %> 
+  <%= form.label :fever, 'Yes' , :value => true %>
+  <%= form.radio_button :fever, false ,:checked => true  %>
+  <%= form.label :fever, 'No', :value => false %>
   </p> 
 
 <p>
 cough:
-<%= form.radio_button :cough, 'cough' %> 
-  <%= label :fever, 'yes' %>
-  <%= form.radio_button :cough, 'cough', :checked => true %>
-  <%= label :fever, 'No' %>
+<%= form.radio_button :cough, true %> 
+  <%= label :fever, 'Yes' , :value => true %>
+  <%= form.radio_button :cough, false, :checked => true %>
+  <%= label :fever, 'No', :value => false %>
   </p> 
 
 <p>
 breath:
-<%= form.radio_button :breath, 'breath' %> 
-  <%= label :fever, 'yes' %>
-  <%= form.radio_button :breath, 'breath', :checked => true %>
-  <%= label :fever, 'No' %>
+<%= form.radio_button :breath, true %> 
+  <%= label :fever, 'Yes' , :value => true %>
+  <%= form.radio_button :breath, false, :checked => true %>
+  <%= label :fever, 'No', :value => false %>
   </p> 
 
 <p>

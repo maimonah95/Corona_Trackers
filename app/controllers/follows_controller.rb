@@ -24,9 +24,9 @@ class FollowsController < ApplicationController
   end
     def index
       #  @follows = Follow.all
-       @follows = current_user.follows.all
-    end
- 
+        @follows = current_user.follows.all
+   
+  end
     def new
         @follow = Follow.new
     end

@@ -1,5 +1,13 @@
 <h2> Follow Up Schedule Day <%= @follow.id %> </h2>
-
+<div class="container">
+<% @count = 0 %>
+<% if @follow.cough == true then @count = @count + 1 end%>
+<% if @follow.fever == true then @count = @count + 1 end%>
+<% if @follow.breath == true then @count = @count + 1 end%>
+<% if @count >= 3 then %>
+count is big: <%= @count %>
+<% end %>
+<br/>
 day: <%= @follow.id %>
 <br/>
 fever: <%= @follow.fever %>
@@ -9,3 +17,5 @@ cough: <%= @follow.cough %>
 breath: <%= @follow.breath %>
 <br/>
 people: <%= @follow.people %>
+</div>
+
