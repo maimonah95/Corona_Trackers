@@ -1,7 +1,7 @@
 
 <div class="card" style="width: 80rem; margin: auto; text-align: center; ">
 <div class="card-header">
-<h2> Follow Up Day <%= @follow.updated_at %> </h2>
+<h2> Follow Up Day <%= @follow.updated_at.strftime("%A, %d/%m/%Y") %> </h2>
 </div>
 <ul class="list-group list-group-flush">
 

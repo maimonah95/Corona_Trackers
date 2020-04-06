@@ -24,15 +24,14 @@ class FollowsController < ApplicationController
   end
     def index
       #  @follows = Follow.all
-      # if @follow.user != current_user
-      # flash[:notice] = 'Not allowed!'
+          if user_signed_in? then 
         @follows = current_user.follows.all 
-  
+         
         # end
         if current_user.role == "Admin" then
           @follows = Follow.all
         end
-           
+         end   
   end
     def new
         @follow = Follow.new
