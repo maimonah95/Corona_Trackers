@@ -30,7 +30,6 @@ class FollowsController < ApplicationController
     def create 
      @follow = Follow.new(schedule_params)
      @follow.user = current_user
-     @follow = Follow.where(created_at: Time.now.beginning_of_day.utc..Time.now.end_of_day.utc).first_or_create!
         if @follow.save
         redirect_to  @follow
         else
@@ -44,7 +43,7 @@ private
       @follow = Follow.find(params[:id])
     end
     def schedule_params
-        params.require(:follow).permit(:fever,:cough,:breath,:people)
+        params.require(:follow).permit(:fever,:cough,:breath,:people,:created_on)
     end
 
 end
