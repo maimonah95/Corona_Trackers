@@ -10,9 +10,15 @@
   </head>
 
   <body>
-    <% if user_signed_in? %>
+    <%
+=begin%>
+ <% if user_signed_in? %>
   <p> Welcome <%=  current_user.name %> </p>
-  <% end %>
+  <% end %> 
+<%
+=end%>
+
+
   <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <%= render 'layouts/nav' %>

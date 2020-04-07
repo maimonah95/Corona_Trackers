@@ -5,8 +5,6 @@
 </div>
 <ul class="list-group list-group-flush">
 
-<li class="list-group-item">day: <%= @follow.id %></li>
-
 <li class="list-group-item">fever: <%= @follow.fever %></li>
 
 <li class="list-group-item">cough: <%= @follow.cough %></li>
@@ -14,6 +12,7 @@
 <li class="list-group-item">breath: <%= @follow.breath %></li>
 
 <li class="list-group-item">people: <%= @follow.people %></li>
+
 <% if (@follow.cough == true) && (@follow.fever == true) && (@follow.breath == true) then%>
 <button type="button" class="btn btn-danger">You Need To seek care immediately</button>
 <% end %>
