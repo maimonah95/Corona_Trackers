@@ -10,4 +10,4 @@
 
 User.create(email: 'admin@gmail.com',name:'Test',phone:556677,password:'test111',password_confirmation:'test111',role:'Admin')
 User.create(email: 'test1@gmail.com',name:'Test1',phone:556677,password:'test111',password_confirmation:'test111')
-User.create(email: 'test@gmail.com',name:'Test',phone:556677,password:'test111',password_confirmation:'test111')
+User.create(email: 'test2@gmail.com',name:'Test',phone:556677,password:'test111',password_confirmation:'test111')
