@@ -1,11 +1,12 @@
 <br/>
+<div class="index-div">
 <% if user_signed_in? %>
-<h1><center><span class="badge badge-secondary">Follow Up Schedule index</span></center></h1>
+<h1  style ="text-align: center; "><span class="badge badge-secondary">Follow Up Schedule index</span></h1>
 <% if current_user.role == "R_user" then %>
-<%= link_to "Add an Day", new_follow_path,{ :class => "btn btn-info"} %>
+<%= link_to "Add For Today", new_follow_path,{ :class => "btn btn-info"} %>
 
 <br/>
-<table class= "table table-hover" style="width: 150rem; margin: auto; text-align: center; border-collapse: separate; border-spacing: 15px;">
+<table class= "table table-hover" style="width: 150rem; margin: auto; text-align: center; border-collapse: separate; border-spacing: 15px; ">
   <thead >
   <tr >
     <th>day</th>
@@ -83,10 +84,21 @@
 <td><%= follow.breath %></td>
 <td><%= follow.people %></td>
 </tr>
+<% else %>
+<tr class="table-info">
+<td><%= follow.updated_at.strftime("%A, %d/%m/%Y") %></td>
+<td><%= follow.user.name %></td>
+<td><%= follow.user.phone %></td>
+<td><%= follow.user.age %></td>
+<td><%= follow.cough %></td>
+<td><%= follow.fever %></td>
+<td><%= follow.breath %></td>
+<td><%= follow.people %></td>
+</tr>
 <% end %>
 <% end %>
 </tbody>
 </table> 
-
 <% end %>
 <% end %>
+</div>

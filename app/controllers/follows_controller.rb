@@ -30,11 +30,13 @@ class FollowsController < ApplicationController
     def create 
      @follow = Follow.new(schedule_params)
      @follow.user = current_user
-        if @follow.save
-        redirect_to  @follow
-        else
-            render 'new'
-        end
+     begin
+    @follow.save!
+       redirect_to  @follow
+  rescue ActiveRecord::RecordNotUnique => e
+    flash[:notice] = 'Not allowed!,you alredy add for today , go and edit '
+    render 'new'
+  end
     end
 
 

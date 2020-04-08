@@ -1,8 +1,10 @@
-<div class="card" style="width: 80rem; margin: auto; text-align: center; ">
+<div class="form-card ">
 <div class="card-header">
+<br/>
+<h1 style ="text-align: center;"><span class="badge badge-secondary"> Follow Up Form</span></h1>
 <%= form_with model:@follow, local:true  do |form| %>
 <p>
-Do you have fever ?
+<b  class="text-in-form">Do you have fever ?</b>
 <%= form.radio_button :fever, true %> 
   <%= form.label :fever, 'Yes' , :value => true %>
   <%= form.radio_button :fever, false ,:checked => true  %>
@@ -10,7 +12,7 @@ Do you have fever ?
   </p> 
 
 <p>
-Do you have cough ?
+<b  class="text-in-form">Do you have cough ?</b>
 <%= form.radio_button :cough, true %> 
   <%= label :fever, 'Yes' , :value => true %>
   <%= form.radio_button :cough, false, :checked => true %>
@@ -18,20 +20,21 @@ Do you have cough ?
   </p> 
 
 <p>
-Do you feel Shortness of breath or difficulty breathing ? 
+<b  class="text-in-form">Do you feel Shortness of breath or difficulty breathing ? </b>
 <%= form.radio_button :breath, true %> 
   <%= label :fever, 'Yes' , :value => true %>
   <%= form.radio_button :breath, false, :checked => true %>
   <%= label :fever, 'No', :value => false %>
   </p> 
-
 <p>
-If you meet someone today write his/her name:
+<b  class="text-in-form">If you meet someone today write his/her name:</b>
 <br/>
 <%= form.text_area :people %>
 </p>
 <p>
 <%= form.submit 'Submit' , class:"btn btn-info"%>
+
+<%= link_to 'Back', follows_path ,class:"btn btn-info"%> 
 </p>
 <% end %>
 

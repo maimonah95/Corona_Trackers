@@ -14,4 +14,15 @@
  *= require_self
  */
   // Custom bootstrap variables must be set or imported *before* bootstrap.
+  @import "follows.scss";
   @import "bootstrap";
+
+  html,
+  body {
+      background:#F5FFFA;
+      background-image: url("https://broomfield.org/ImageRepository/Document?documentID=34761");
+      background-repeat: no-repeat;
+      background-position: bottom;
+      height: 2000px;
+        padding: 25px;
+  }
