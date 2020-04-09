@@ -25,19 +25,19 @@ people who:
  
  The app save data for each user every day and Follows the temperature and other symptoms.
  there is other rol in this app (Admin or hospital) they can follow each user and symptoms and can view the information and call them if they need .
-Wireframes: 
+* Wireframes: 
 ![User Day by Day Follow](img/daybyday.png)
 ![User all Follow Schedule](img/user_index.png)
 ![Admin all Follow Schedule](img/admin_index.png)
 
 
-ERD:
+* ERD:
 ![ERD](img/erd.png)
 
-Use case:
+* Use case:
 ![Use Case](img/usecase.png)
 
-User Story:
+* User Story:
 As a user, I can SignUp.
 As a user, I can sign in.
 As a user, I can logout.
