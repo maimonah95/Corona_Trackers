@@ -1,10 +1,10 @@
-# CORONa TRACKER
+# COVID-19 TRACKER
 <img src="https://broomfield.org/ImageRepository/Document?documentID=34761" width="450" height="350">
 
 
 # Project Title
 
-Corona Virous Ttracker
+COVID-19 Ttracker
 
 # project Description:
 
