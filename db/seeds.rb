@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Follow.create(fever:false, cough:false, breath:false, people:'No one')
+# Follow.create(fever:true, cough:true, breath:true, people:'No one',user_id:)
+# Follow.create(fever:false, cough:true, breath:true, people:'No one',user_id:)
 
 User.create(email: 'admin@gmail.com',name:'Test',phone:556677,password:'test111',password_confirmation:'test111',role:'Admin')
 User.create(email: 'test1@gmail.com',name:'Test1',phone:556677,password:'test111',password_confirmation:'test111')
